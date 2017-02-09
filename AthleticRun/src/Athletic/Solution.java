@@ -6,7 +6,7 @@ public class Solution {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 
-		System.out.print("Input(arrSize) >>");
+		System.out.print("Input(arrSize) >> ");
 		int arrSize = input.nextInt();
 		int count;
 
@@ -14,7 +14,7 @@ public class Solution {
 		int[] result = new int[arrSize];
 
 		for (int i = 0; i < arr.length; i++) {
-			System.out.print("Input:" + (i + 1) + "th num");
+			System.out.print("Input: " + (i + 1) + "th num");
 			arr[i] = input.nextInt();
 		}
 
@@ -23,7 +23,7 @@ public class Solution {
 
 			if (i == 0) {
 				result[i] = 1;
-				System.out.print(result[i] + ", ");
+				System.out.print(result[i] + " ");
 			} else {
 				for (int j = i; j >= 0; j--) {
 					if (arr[i] > arr[j]) {
@@ -31,8 +31,9 @@ public class Solution {
 					}
 				}
 				result[i] = (i + 1) - count;
-				System.out.print(result[i] + ", ");
+				System.out.print(result[i] + " ");
 			}
 		}
+		input.close();
 	}
 }
