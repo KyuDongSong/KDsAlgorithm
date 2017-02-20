@@ -8,23 +8,20 @@ public class Solution {
 
 		Scanner input = new Scanner(System.in);
 
-		System.out.print("Input Num Of ShootingSpot: ");
 		int numOfSpot = input.nextInt();
 		int[] shootingSpot = new int[numOfSpot];
-		System.out.print("Input Num Of Animals: ");
+
 		int numOfAnimal = input.nextInt();
 		int[] targetX = new int[numOfAnimal];
 		int[] targetY = new int[numOfAnimal];
-		System.out.print("Input Max Length: ");
+
 		int length = input.nextInt();
 
 		for (int i = 0; i < numOfSpot; i++) {
 			shootingSpot[i] = input.nextInt();
 		}
 		for (int i = 0; i < numOfAnimal; i++) {
-			System.out.print("Input Animals Position Of X ");
 			targetX[i] = input.nextInt();
-			System.out.print("Input Animals Position Of Y ");
 			targetY[i] = input.nextInt();
 		}
 
@@ -39,6 +36,7 @@ public class Solution {
 			}
 		}
 		System.out.println(count);
+		input.close();
 	}
 
 	public static int findAbsoluteValue(int input) {
